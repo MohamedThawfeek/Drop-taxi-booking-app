@@ -1,20 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/navbar/navbar'
-import Hero from '../../components/hero/hero'
 import Cars from '../../components/cars/cars'
-import About from '../../components/about/about'
-import Cities from '../../components/cities/cities'
 import Footer from '../../components/footer/footer'
-const Home = () => {
+
+const Tariff = () => {
   return (
     <div className='w-full h-dvh bg-white'>
-        <Hero />
         <Cars />
-        <About />
-        <Cities />
         <Footer />
     </div>
   )
 }
 
-export default Home
+export default Tariff

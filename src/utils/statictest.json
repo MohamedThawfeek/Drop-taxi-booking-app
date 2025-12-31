@@ -7,7 +7,7 @@
             },
             {
                 "label": "Book Now",
-                "path": "/book-now"
+                "path": "/booking"
             },
             {
                 "label": "Our Service",
@@ -68,7 +68,7 @@
             },
             {
                 "label": "Book Now",
-                "path": "/book-now"
+                "path": "/booking"
             },
             {
                 "label": "Our Service",
@@ -80,7 +80,7 @@
             },
             {
                 "label": "Cities Covered",
-                "path": "/cities-covered"
+                "path": "/cities"
             }
         ],
         "serviceAreasTitle": "Service Areas",
@@ -160,6 +160,11 @@
                 "label": "Corporate Travel",
                 "path": "#"
             }
-        ]
+        ],
+        "copyright": "© 2025 Drop Taxi Trip. All rights reserved.",
+        "netbix-technologies": "Netbix Technologies — More Clicks. More Leads. More Growth.",
+        "privacy-policy": "Privacy Policy",
+        "terms-of-service": "Terms of Service",
+        "cancellation-policy": "Cancellation Policy"
     }
 }

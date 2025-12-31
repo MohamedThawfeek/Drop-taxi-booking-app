@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           {/* Column 4: Service Areas */}
-          <div className="2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-1 xs:col-span-1 xss:col-span-1 mobile:col-span-1">
+          <div className="2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-2 xs:col-span-2 xss:col-span-2 mobile:col-span-2">
             <h3 className="text-xl font-bold mb-4">
               {Json["footer-section"].serviceAreasTitle}
             </h3>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
           {/* Column 5: Contact Info */}
-          <div className="2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-1 xs:col-span-1 xss:col-span-1 mobile:col-span-1">
+          <div className="2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-2 xs:col-span-2 xss:col-span-2 mobile:col-span-2">
             <h3 className="text-xl font-bold mb-4">
               {Json["footer-section"]["contact-info-title"]}
             </h3>
@@ -135,20 +135,20 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <div>© 2025 Drop Taxi Trip. All rights reserved.</div>
+          <div className="flex  2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col xs:flex-col xss:flex-col mobile:flex-col justify-between items-center gap-4 text-sm">
+            <div>{Json["footer-section"].copyright}</div>
             <div className="text-center">
-              Netbix Technologies — More Clicks. More Leads. More Growth.
+              {Json["footer-section"]["netbix-technologies"]}
             </div>
             <div className="flex gap-4">
               <a href="/privacy-policy" className="hover:underline">
-                Privacy Policy
+                {Json["footer-section"]["privacy-policy"]}
               </a>
               <a href="/terms-of-service" className="hover:underline">
-                Terms of Service
+                {Json["footer-section"]["terms-of-service"]}
               </a>
               <a href="/cancellation-policy" className="hover:underline">
-                Cancellation Policy
+                {Json["footer-section"]["cancellation-policy"]}
               </a>
             </div>
           </div>
