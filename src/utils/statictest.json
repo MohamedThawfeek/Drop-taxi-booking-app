@@ -1,0 +1,165 @@
+{
+    "Navbar": {
+        "navItems": [
+            {
+                "label": "Home",
+                "path": "/"
+            },
+            {
+                "label": "Book Now",
+                "path": "/book-now"
+            },
+            {
+                "label": "Our Service",
+                "path": "/our-service"
+            },
+            {
+                "label": "Tariff",
+                "path": "/tariff"
+            },
+            {
+                "label": "Cities",
+                "path": "/cities"
+            }
+        ],
+        "contact": "+91 8248383211"
+    },
+    "hero-section": {
+        "title": "Drop Taxi Trip ",
+        "title1": "Your Trusted",
+        "title-highlight": "One Way & Drop Taxi",
+        "title2": "Service",
+        "form-title": "Quick Booking Form",
+        "form-title-highlight": "Best prices guaranteed • 24/7 customer support • Verified drivers - Nagma Tours and Travel"
+    },
+    "cars-section": {
+        "title": "Our Cars",
+        "description": "Comfort, class, and safety — choose your perfect ride.",
+        "rupee": "₹",
+        "popular": "Popular",
+        "one-way": "One Way",
+        "round-trip": "Round Trip",
+        "book-now": "Book Now",
+        "km": "KM",
+        "minimum-distance": "Minimum",
+        "passengers": "Passengers",
+        "baggage": "Large Bags",
+        "diver-below": "Flat Driver Beta: ₹400 — applies to both One Way & Round Trip",
+        "button": "Book Now",
+        "button2": "Call Now"
+    },
+    "about-section": {
+        "title": "About Our Service",
+        "description": "We provide reliable drop taxi services connecting major cities across Tamil Nadu, Bengaluru, and Pondicherry. Our mission is to make intercity travel affordable, safe, and convenient for everyone.",
+        "button": "Read More"
+    },
+    "cities-section": {
+        "title": "Cities We Serve",
+        "description": "Trusted drop taxi service across South India — covering major cities and tourist destinations."
+    },
+    "footer-section": {
+        "title": "Drop Taxi Trip",
+        "description": "Your trusted partner for affordable and reliable shared taxi services across Karnataka, Tamil Nadu, and Pondicherry.",
+        "quickLinkTitle": "Quick Links",
+        "quick-links": [
+            {
+                "label": "Home",
+                "path": "/"
+            },
+            {
+                "label": "Book Now",
+                "path": "/book-now"
+            },
+            {
+                "label": "Our Service",
+                "path": "/our-service"
+            },
+            {
+                "label": "Tariff",
+                "path": "/tariff"
+            },
+            {
+                "label": "Cities Covered",
+                "path": "/cities-covered"
+            }
+        ],
+        "serviceAreasTitle": "Service Areas",
+        "services": [
+            {
+                "label": "Chennai Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Coimbatore Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Salem Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Erode Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Bengaluru Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Madurai Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Trichy Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Tirunelveli Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Tiruppur Drop Taxi",
+                "path": "#"
+            },
+            {
+                "label": "Puducherry Drop Taxi",
+                "path": "#"
+            }
+        ],
+        "contact-info-title": "Contact Info",
+        "contact-info": [
+            {
+                "label": "Tamil Nadu, Bengaluru and Puducherry"
+            },
+            {
+                "label": "+91 73395 40017"
+            },
+            {
+                "label": "officialdroptaxitrip@gmail.com"
+            }
+        ],
+        "servicetitle": "Services",
+        "service": [
+            {
+                "label": "Oneway Drop taxi",
+                "path": "#"
+            },
+            {
+                "label": "Outstation Cabs",
+                "path": "#"
+            },
+            {
+                "label": "Airport Transfers",
+                "path": "#"
+            },
+            {
+                "label": "Tour packages",
+                "path": "#"
+            },
+            {
+                "label": "Corporate Travel",
+                "path": "#"
+            }
+        ]
+    }
+}
