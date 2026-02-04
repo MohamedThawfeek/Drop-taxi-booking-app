@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./page/home/home";
-import Booking from "./page/booking/booking";
-import Service from "./page/service/service";
-import Tariff from "./page/tariff/tariff";
-import CitiesPage from "./page/cities/cities";
-import Navbar from "./components/navbar/navbar";
+import Home from "./page/home/home.jsx";
+import Booking from "./page/booking/booking.jsx";
+import Service from "./page/service/service.jsx";
+import Tariff from "./page/tariff/tariff.jsx";
+import CitiesPage from "./page/cities/cities.jsx";
+import Navbar from "./components/navbar/navbar.jsx";
 const App = () => {
   return (
     <div className="w-full h-dvh bg-white">

@@ -23,7 +23,9 @@ const Navbar = () => {
               <p
                 key={index}
                 onClick={() => navigate(item.path)}
-                className="text-navbar-text text-sm font-medium cursor-pointer hover:opacity-80 transition-opacity"
+                className={` text-sm font-medium cursor-pointer hover:opacity-80 transition-opacity ${
+                  window.location.pathname === item.path ? "text-navbar-active-text" : "text-navbar-text"
+                }`}
               >
                 {item.label}
               </p>

@@ -1,5 +1,4 @@
 import React from 'react'
-import sedanImage from '../../assets/cars/sedan.png'
 import Json from '../../utils/statictest.json'
 
 const CarDetails = ({ car }) => {
@@ -9,11 +8,11 @@ const CarDetails = ({ car }) => {
       <div className='relative w-full mb-4'>
         <img 
           src={car.image} 
-          alt="Sedan" 
+          alt={car.name} 
           className='w-full h-[230px] rounded-lg object-contain'
         />
         {/* Price Tag */}
-        <div className='absolute bottom-4 left-4 bg-cars-button-color text-black border-[1px] border-black px-6 py-2 rounded-full text-sm font-semibold'>
+        <div className='absolute bottom-4 left-4 bg-cars-button-color text-cars-button-text  px-6 py-2 rounded-full text-sm font-semibold'>
           ₹{car.oneWayPrice} ({Json["cars-section"]["one-way"]})
         </div>
       </div>

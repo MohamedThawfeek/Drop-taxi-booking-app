@@ -2,7 +2,7 @@ import React from "react";
 
 const CityDetails = ({ city }) => {
   return (
-    <div className="2xl:w-full xl:w-full lg:w-full md:w-[97%] sm:w-[97%] xs:w-[97%] xss:w-[97%] mobile:w-[97%] mx-auto relative rounded-lg overflow-hidden border-2 border-[#f89835] min-h-[250px] flex flex-col group">
+    <div className="2xl:w-full xl:w-full lg:w-full md:w-[97%] sm:w-[97%] xs:w-[97%] xss:w-[97%] mobile:w-[97%] mx-auto relative rounded-lg overflow-hidden border-2 border-cities-button-color min-h-[250px] flex flex-col group">
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
       <img
         src={city.image}
@@ -35,12 +35,12 @@ const CityDetails = ({ city }) => {
           </h3>
         </div>
         <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-3 mt-4">
-          <button className="flex-1 bg-cities-button-color text-base text-cities-button-text w-full h-[40px] rounded-full font-semibold hover:bg-[#e8892a] transition-colors">
+          <button className="flex-1 bg-cities-button-color text-base text-cities-button-text w-full h-[40px] rounded-full font-semibold hover:bg-cities-button-color transition-colors">
             Book Now
           </button>
-          <button className="flex-1 bg-white border-2 border-cities-button-color text-base text-cities-button-text w-full h-[40px] rounded-full font-semibold hover:bg-[#fef7eb] transition-colors flex items-center justify-center gap-2">
+          <button className="flex-1 bg-white border-2 border-cities-button-color text-base text-cities-button-color w-full h-[40px] rounded-full font-semibold hover:bg-[#fef7eb] transition-colors flex items-center justify-center gap-2">
             <svg
-              className="w-5 h-5 text-cities-button-text"
+              className="w-5 h-5 text-cities-button-color"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

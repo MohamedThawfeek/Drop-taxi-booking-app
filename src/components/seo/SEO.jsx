@@ -19,9 +19,14 @@ const SEO = ({
   type = 'website'
 }) => {
   useEffect(() => {
+    // Check if we're in the browser
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+
     // Get current URL if not provided
-    const currentUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
-    const imageUrl = image.startsWith('http') ? image : (typeof window !== 'undefined' ? `${window.location.origin}${image}` : image);
+    const currentUrl = url || window.location.href;
+    const imageUrl = image.startsWith('http') ? image : `${window.location.origin}${image}`;
     // Update document title
     document.title = title;
 

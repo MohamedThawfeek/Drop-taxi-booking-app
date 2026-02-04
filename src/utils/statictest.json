@@ -166,5 +166,71 @@
         "privacy-policy": "Privacy Policy",
         "terms-of-service": "Terms of Service",
         "cancellation-policy": "Cancellation Policy"
-    }
+    },
+    "cars": [
+        {
+          "name": "Sedan",
+          "image": "../../../src/assets/cars/sedan.png",
+          "oneWayPrice": "14",
+          "roundTripPrice": "13",
+          "passengers": "4",
+          "baggage": "2"
+        },
+        {
+          "name": "SUV",
+          "image": "../../../src/assets/cars/suv.webp",
+          "oneWayPrice": "19",
+          "roundTripPrice": "18",
+          "passengers": "6",
+          "baggage": "4"
+        },
+        {
+          "name": "Innova",
+          "image": "../../../src/assets/cars/innova.webp",
+          "oneWayPrice": "20",
+          "roundTripPrice": "19",
+          "passengers": "7",
+          "baggage": "3-4"
+        },
+        {
+          "name": "Innova Crysta",
+          "image": "../../../src/assets/cars/innovacrysta.webp",
+          "oneWayPrice": "24",
+          "roundTripPrice": "23",
+          "passengers": "8",
+          "baggage": "3-4"
+        },
+        {
+            "name": "Sedan",
+            "image": "../../../src/assets/cars/sedan.png",
+            "oneWayPrice": "14",
+            "roundTripPrice": "13",
+            "passengers": "4",
+            "baggage": "2"
+          },
+          {
+            "name": "SUV",
+            "image": "../../../src/assets/cars/suv.webp",
+            "oneWayPrice": "19",
+            "roundTripPrice": "18",
+            "passengers": "6",
+            "baggage": "4"
+          },
+          {
+            "name": "Innova",
+            "image": "../../../src/assets/cars/innova.webp",
+            "oneWayPrice": "20",
+            "roundTripPrice": "19",
+            "passengers": "7",
+            "baggage": "3-4"
+          },
+          {
+            "name": "Innova Crysta",
+            "image": "../../../src/assets/cars/innovacrysta.webp",
+            "oneWayPrice": "24",
+            "roundTripPrice": "23",
+            "passengers": "8",
+            "baggage": "3-4"
+          }
+      ]
 }
