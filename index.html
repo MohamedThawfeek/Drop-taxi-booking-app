@@ -35,15 +35,14 @@
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#ffffff" />
+    <!-- Preload LCP image to improve Largest Contentful Paint -->
+    <link rel="preload" as="image" href="/hero.png" type="image/png">
+    <!-- Preload main module to hint browser (Vite will handle modulepreload in production) -->
+    <link rel="modulepreload" href="/src/main.jsx">
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaTt0nySNajUgBeAY01eT2PthDd-AQq38&libraries=places"
-  async
-  defer
-></script>
 
   </body>
 </html>
