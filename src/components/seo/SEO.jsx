@@ -69,6 +69,30 @@ const SEO = ({
     }
     canonical.setAttribute('href', currentUrl);
 
+    // Preload image for faster LCP if provided
+    try {
+      const existingPreload = document.querySelector(`link[rel="preload"][href="${imageUrl}"]`);
+      if (!existingPreload && imageUrl) {
+        const ext = imageUrl.split('.').pop().split(/\#|\?/)[0].toLowerCase();
+        let type = '';
+        if (ext === 'avif') type = 'image/avif';
+        else if (ext === 'webp') type = 'image/webp';
+        else if (ext === 'png') type = 'image/png';
+        else if (ext === 'jpg' || ext === 'jpeg') type = 'image/jpeg';
+        const preload = document.createElement('link');
+        preload.setAttribute('rel', 'preload');
+        preload.setAttribute('as', 'image');
+        preload.setAttribute('href', imageUrl);
+        if (type) preload.setAttribute('type', type);
+        // If cross-origin, add crossorigin
+        if (!imageUrl.startsWith(window.location.origin)) {
+          preload.setAttribute('crossorigin', 'anonymous');
+        }
+        document.head.appendChild(preload);
+      }
+    } catch (e) {
+      // ignore preload errors
+    }
     // Viewport (usually already set, but ensure it exists)
     updateMetaTag('viewport', 'width=device-width, initial-scale=1.0');
   }, [title, description, keywords, image, url, type]);

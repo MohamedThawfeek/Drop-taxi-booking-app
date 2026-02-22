@@ -16,7 +16,11 @@ const CarDetails = ({ car }) => {
         <img
           src={car.image}
           alt={car.name}
-          className="w-full h-[230px] rounded-lg object-contain"
+          loading="lazy"
+          width="800"
+          height="460"
+          style={{ aspectRatio: "16/9" }}
+          className="w-full rounded-lg object-cover"
         />
         {/* Price Tag */}
         <div className="absolute bottom-4 left-4 bg-cars-button-color text-cars-button-text  px-6 py-2 rounded-full text-sm font-semibold">
