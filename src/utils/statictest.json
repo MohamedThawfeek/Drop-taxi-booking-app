@@ -170,7 +170,7 @@
     "cars": [
         {
           "name": "Sedan",
-          "image": "../../../src/assets/cars/sedan.png",
+          "image": "/cars/sedan.png",
           "oneWayPrice": "14",
           "roundTripPrice": "13",
           "passengers": "4",
@@ -178,7 +178,7 @@
         },
         {
           "name": "SUV",
-          "image": "../../../src/assets/cars/suv.webp",
+          "image": "/cars/suv.webp",
           "oneWayPrice": "19",
           "roundTripPrice": "18",
           "passengers": "6",
@@ -186,7 +186,7 @@
         },
         {
           "name": "Innova",
-          "image": "../../../src/assets/cars/innova.webp",
+          "image": "/cars/innova.webp",
           "oneWayPrice": "20",
           "roundTripPrice": "19",
           "passengers": "7",
@@ -194,7 +194,7 @@
         },
         {
           "name": "Innova Crysta",
-          "image": "../../../src/assets/cars/innovacrysta.webp",
+          "image": "/cars/innovacrysta.webp",
           "oneWayPrice": "24",
           "roundTripPrice": "23",
           "passengers": "8",
@@ -202,7 +202,7 @@
         },
         {
             "name": "Sedan",
-            "image": "../../../src/assets/cars/sedan.png",
+            "image": "/cars/sedan.png",
             "oneWayPrice": "14",
             "roundTripPrice": "13",
             "passengers": "4",
@@ -210,7 +210,7 @@
           },
           {
             "name": "SUV",
-            "image": "../../../src/assets/cars/suv.webp",
+            "image": "/cars/suv.webp",
             "oneWayPrice": "19",
             "roundTripPrice": "18",
             "passengers": "6",
@@ -218,7 +218,7 @@
           },
           {
             "name": "Innova",
-            "image": "../../../src/assets/cars/innova.webp",
+            "image": "/cars/innova.webp",
             "oneWayPrice": "20",
             "roundTripPrice": "19",
             "passengers": "7",
@@ -226,7 +226,7 @@
           },
           {
             "name": "Innova Crysta",
-            "image": "../../../src/assets/cars/innovacrysta.webp",
+            "image": "/cars/innovacrysta.webp",
             "oneWayPrice": "24",
             "roundTripPrice": "23",
             "passengers": "8",
