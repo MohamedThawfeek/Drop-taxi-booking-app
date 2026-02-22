@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Navbar from "../../components/navbar/navbar";
 import Hero from "../../components/hero/hero";
 import Cars from "../../components/cars/cars";
-import About from "../../components/about/about";
-import Cities from "../../components/cities/cities";
-import Footer from "../../components/footer/footer";
 import SEO from "../../components/seo/SEO";
+
+// Lazy-load non-critical/below-the-fold components
+const About = React.lazy(() => import("../../components/about/about"));
+const Cities = React.lazy(() => import("../../components/cities/cities"));
+const Footer = React.lazy(() => import("../../components/footer/footer"));
 
 const Home = () => {
   return (
@@ -17,9 +19,11 @@ const Home = () => {
       />
       <Hero />
       <Cars />
-      <About />
-      <Cities />
-      <Footer />
+      <Suspense fallback={null}>
+        <About />
+        <Cities />
+        <Footer />
+      </Suspense>
     </div>
   );
 };
