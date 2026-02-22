@@ -62,7 +62,10 @@ const Form = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (carDropdownRef.current && !carDropdownRef.current.contains(event.target)) {
+      if (
+        carDropdownRef.current &&
+        !carDropdownRef.current.contains(event.target)
+      ) {
         setIsCarDropdownOpen(false);
       }
     };
@@ -99,9 +102,9 @@ const Form = () => {
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(toRad(lat1)) *
-      Math.cos(toRad(lat2)) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
+        Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
 
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
@@ -114,13 +117,17 @@ const Form = () => {
         geocode.lat,
         geocode.lng,
         geocode1.lat,
-        geocode1.lng
+        geocode1.lng,
       );
       const Totalkilometer = Math.round(KM);
       setKilometer(Totalkilometer);
       setFormData((prev) => ({
         ...prev,
-        price: Totalkilometer * (formData.tripType === "One Way" ? selectedCar.oneWayPrice : selectedCar.roundTripPrice),
+        price:
+          Totalkilometer *
+          (formData?.tripType === "One Way"
+            ? selectedCar?.oneWayPrice
+            : selectedCar?.roundTripPrice),
       }));
     }
   }, [geocode, geocode1, selectedCar]);
@@ -153,8 +160,9 @@ const Form = () => {
               >
                 <span>{formData.tripType}</span>
                 <svg
-                  className={`w-5 h-5 text-gray-500 transition-transform ${isDropdownOpen ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 text-gray-500 transition-transform ${
+                    isDropdownOpen ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -176,13 +184,14 @@ const Form = () => {
                       key={option}
                       type="button"
                       onClick={() => {
-                        console.log(option)
-                        handleTripTypeSelect(option)
+                        console.log(option);
+                        handleTripTypeSelect(option);
                       }}
-                      className={`w-full px-4 py-3 text-left flex items-center justify-between transition-colors ${formData.tripType === option
-                        ? "bg-form-button-color text-form-button-text"
-                        : "bg-form-input-background text-gray-700 hover:bg-form-input-background"
-                        }`}
+                      className={`w-full px-4 py-3 text-left flex items-center justify-between transition-colors ${
+                        formData.tripType === option
+                          ? "bg-form-button-color text-form-button-text"
+                          : "bg-form-input-background text-gray-700 hover:bg-form-input-background"
+                      }`}
                     >
                       <span>{option}</span>
                       {formData.tripType === option && (
@@ -218,18 +227,20 @@ const Form = () => {
                 onClick={() => setIsCarDropdownOpen(!isCarDropdownOpen)}
                 className="w-full bg-form-input-background border border-form-input-border  rounded-lg p-3  text-gray-700 text-left flex items-center justify-between outline-none "
               >
-                <span>{selectedCar ? selectedCar.name : "Select Car"} {
-                  selectedCar && (<span className={`text-[11px] text-[#8b8888]`}>
-                    {
-                      formData.tripType === "One Way" ? (`₹${selectedCar?.oneWayPrice}/KM ${Json["cars-section"]["one-way"]}`) : (`₹${selectedCar?.roundTripPrice}/KM ${Json["cars-section"]["round-trip"]}`)
-                    }
-                  </span>
-                  )
-                }
+                <span>
+                  {selectedCar ? selectedCar.name : "Select Car"}{" "}
+                  {selectedCar && (
+                    <span className={`text-[11px] text-[#8b8888]`}>
+                      {formData.tripType === "One Way"
+                        ? `₹${selectedCar?.oneWayPrice}/KM ${Json["cars-section"]["one-way"]}`
+                        : `₹${selectedCar?.roundTripPrice}/KM ${Json["cars-section"]["round-trip"]}`}
+                    </span>
+                  )}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-gray-500 transition-transform ${isCarDropdownOpen ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 text-gray-500 transition-transform ${
+                    isCarDropdownOpen ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -251,15 +262,26 @@ const Form = () => {
                       key={car.name}
                       type="button"
                       onClick={() => {
-                        setSelectedCar(car)
-                        setIsCarDropdownOpen(false)
+                        setSelectedCar(car);
+                        setIsCarDropdownOpen(false);
                       }}
-                      className={`w-full px-4 py-3 text-left flex items-center justify-between transition-colors ${selectedCar === car
-                        ? "bg-form-button-color text-form-button-text"
-                        : "bg-form-input-background text-gray-700 hover:bg-form-input-background"
-                        }`}
+                      className={`w-full px-4 py-3 text-left flex items-center justify-between transition-colors ${
+                        selectedCar === car
+                          ? "bg-form-button-color text-form-button-text"
+                          : "bg-form-input-background text-gray-700 hover:bg-form-input-background"
+                      }`}
                     >
-                      <span>{car.name} <span className={`text-[11px] ${selectedCar === car ? "text-form-button-text" : "text-[#8b8888]"}`}>(₹{car.oneWayPrice}/KM {Json["cars-section"]["one-way"]}) - (₹{car.roundTripPrice}/KM {Json["cars-section"]["round-trip"]})</span></span>
+                      <span>
+                        {car.name}{" "}
+                        <span
+                          className={`text-[11px] ${selectedCar === car ? "text-form-button-text" : "text-[#8b8888]"}`}
+                        >
+                          (₹{car.oneWayPrice}/KM{" "}
+                          {Json["cars-section"]["one-way"]}) - (₹
+                          {car.roundTripPrice}/KM{" "}
+                          {Json["cars-section"]["round-trip"]})
+                        </span>
+                      </span>
                       {selectedCar === car && (
                         <svg
                           className="w-5 h-5 text-white"
@@ -317,31 +339,55 @@ const Form = () => {
                   className="w-full bg-form-input-background border border-form-input-border rounded-lg px-4 py-3 pl-10 text-gray-700 placeholder-gray-400 outline-none"
                 />
 
-                {location && location?.length > 0 && dropdownLocation && (
-                  <div className="absolute top-[110%] left-0 w-full h-[250px] overflow-y-auto bg-white shadow-lg rounded-lg py-2 border border-form-input-border z-40 flex flex-col gap-2">
-                    {location?.map((item) => (
-                      <div
-                        onClick={() => {
-                          setFormData((prev) => ({
-                            ...prev,
-                            pickUpLocation: item.name,
-                          }));
-                          setLocation([]);
-                          setDropdownLocation(false);
-                          setsearch("");
-                          setgeocode(item.coordinates);
-                        }}
-                        className="hover:bg-[#d3d3d3] px-2 py-1 cursor-pointer"
-                        key={item.place_id}
-                      >
-                        <p className="text-sm font-medium">{item.name}</p>
-                        <p className="text-xs text-gray-500">
-                          {item.formatted_address}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                {search.length > 0 && (
+                  <p
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer"
+                    onClick={() => setsearch("")}
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </p>
                 )}
+
+                {search.length > 0 &&
+                  location &&
+                  location?.length > 0 &&
+                  dropdownLocation && (
+                    <div className="absolute top-[110%] left-0 w-full h-[250px] overflow-y-auto bg-white shadow-lg rounded-lg py-2 border border-form-input-border z-40 flex flex-col gap-2">
+                      {location?.map((item) => (
+                        <div
+                          onClick={() => {
+                            setFormData((prev) => ({
+                              ...prev,
+                              pickUpLocation: item.name,
+                            }));
+                            setLocation([]);
+                            setDropdownLocation(false);
+                            setsearch("");
+                            setgeocode(item.coordinates);
+                          }}
+                          className="hover:bg-[#d3d3d3] px-2 py-1 cursor-pointer"
+                          key={item.place_id}
+                        >
+                          <p className="text-sm font-medium">{item.name}</p>
+                          <p className="text-xs text-gray-500">
+                            {item.formatted_address}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
               </div>
             </div>
 
@@ -383,31 +429,55 @@ const Form = () => {
                   className="w-full bg-form-input-background border border-form-input-border rounded-lg px-4 py-3 pl-10 text-gray-700 placeholder-gray-400 outline-none "
                 />
 
-                {location2 && location2?.length > 0 && dropdownLocation2 && (
-                  <div className="absolute top-[110%] left-0 w-full h-[250px] overflow-y-auto bg-white shadow-lg rounded-lg py-2 border border-form-input-border z-40 flex flex-col gap-2">
-                    {location2?.map((item) => (
-                      <div
-                        onClick={() => {
-                          setFormData((prev) => ({
-                            ...prev,
-                            dropOffLocation: item.name,
-                          }));
-                          setLocation2([]);
-                          setDropdownLocation2(false);
-                          setsetseacrch2("");
-                          setgeocode1(item.coordinates);
-                        }}
-                        className="hover:bg-[#d3d3d3] px-2 py-1 cursor-pointer"
-                        key={item.place_id}
-                      >
-                        <p className="text-sm font-medium">{item.name}</p>
-                        <p className="text-xs text-gray-500">
-                          {item.formatted_address}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                {setseacrch2.length > 0 && (
+                  <p
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer"
+                    onClick={() => setsetseacrch2("")}
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </p>
                 )}
+
+                {setseacrch2.length > 0 &&
+                  location2 &&
+                  location2?.length > 0 &&
+                  dropdownLocation2 && (
+                    <div className="absolute top-[110%] left-0 w-full h-[250px] overflow-y-auto bg-white shadow-lg rounded-lg py-2 border border-form-input-border z-40 flex flex-col gap-2">
+                      {location2?.map((item) => (
+                        <div
+                          onClick={() => {
+                            setFormData((prev) => ({
+                              ...prev,
+                              dropOffLocation: item.name,
+                            }));
+                            setLocation2([]);
+                            setDropdownLocation2(false);
+                            setsetseacrch2("");
+                            setgeocode1(item.coordinates);
+                          }}
+                          className="hover:bg-[#d3d3d3] px-2 py-1 cursor-pointer"
+                          key={item.place_id}
+                        >
+                          <p className="text-sm font-medium">{item.name}</p>
+                          <p className="text-xs text-gray-500">
+                            {item.formatted_address}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
               </div>
             </div>
 
@@ -581,8 +651,21 @@ const Form = () => {
             )}
           </div>
 
-          <button disabled={!selectedCar || !formData.pickUpLocation || !formData.dropOffLocation || !formData.phoneNumber || !formData.pickUpDate || !formData.pickUpTime || !formData.dropOffDate} className="w-full bg-form-button-color text-form-button-text rounded-lg px-4 py-3 text-center disabled:bg-gray-400 disabled:text-gray-600">Book Now {selectedCar ? 
-          `₹${Number(formData.price).toFixed(2)}` : ""}</button>
+          <button
+            disabled={
+              !selectedCar ||
+              !formData.pickUpLocation ||
+              !formData.dropOffLocation ||
+              !formData.phoneNumber ||
+              !formData.pickUpDate ||
+              !formData.pickUpTime ||
+              !formData.dropOffDate
+            }
+            className="w-full bg-form-button-color text-form-button-text rounded-lg px-4 py-3 text-center disabled:bg-gray-400 disabled:text-gray-600"
+          >
+            Book Now{" "}
+            {selectedCar ? `₹${Number(formData.price).toFixed(2)}` : ""}
+          </button>
         </div>
 
         {/* Footer */}

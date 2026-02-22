@@ -199,38 +199,7 @@
           "roundTripPrice": "23",
           "passengers": "8",
           "baggage": "3-4"
-        },
-        {
-            "name": "Sedan",
-            "image": "/cars/sedan.png",
-            "oneWayPrice": "14",
-            "roundTripPrice": "13",
-            "passengers": "4",
-            "baggage": "2"
-          },
-          {
-            "name": "SUV",
-            "image": "/cars/suv.webp",
-            "oneWayPrice": "19",
-            "roundTripPrice": "18",
-            "passengers": "6",
-            "baggage": "4"
-          },
-          {
-            "name": "Innova",
-            "image": "/cars/innova.webp",
-            "oneWayPrice": "20",
-            "roundTripPrice": "19",
-            "passengers": "7",
-            "baggage": "3-4"
-          },
-          {
-            "name": "Innova Crysta",
-            "image": "/cars/innovacrysta.webp",
-            "oneWayPrice": "24",
-            "roundTripPrice": "23",
-            "passengers": "8",
-            "baggage": "3-4"
-          }
+        }
+       
       ]
 }

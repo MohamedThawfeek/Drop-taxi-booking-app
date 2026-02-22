@@ -6,6 +6,7 @@ import Form from "../form/form";
 const Hero = () => {
   return (
     <div
+      id="booking"
       style={{ backgroundImage: `url(${HeroImage})` }}
       className="w-full min-h-dvh bg-cover bg-center relative flex items-center justify-center 2xl:p-3 xl:p-3 lg:p-3 md:p-3 sm:py-2 xs:py-2 xss:py-2 mobile:py-2"
     >
